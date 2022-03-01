@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Numeros_Primos_2._0
+namespace Practica_Proyecto
 {
     class Proceso
     {
@@ -12,15 +12,17 @@ namespace Numeros_Primos_2._0
         {
             Proceso opr = new Proceso();
             Menu1 me = new Menu1();
+            
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.Clear();
+            
             if (a == 1)
             {
-                Console.WriteLine("____________________________________________");
-                Console.Write("   Ingrese el valor minimo del Rango: ");
-                int numero = int.Parse(Console.ReadLine());
-                Console.Write("   Ingrese el valor maximo del Rango: ");
-                int rangomax = int.Parse(Console.ReadLine());
-                Console.WriteLine("____________________________________________");
-                opr.rango(numero, rangomax);
+                
+                int[] b = Menu1.Rangos();
+                
+                opr.rango(b[0], b[1]);
                 a = 9;
             }
             else if (a == 2)
@@ -37,13 +39,19 @@ namespace Numeros_Primos_2._0
             {
                 a = 0;
             }
-            Console.ReadKey();
-            Console.Clear();
+            
             return a;
         }
         public void rango(int a, int b, int c = 0)
         {
-            Console.WriteLine("    Numero Primos del rango " + a + " al " + b);
+           
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Clear();
+            Console.WriteLine("   \t\t\t\t\t Numero Primos del rango " + a + " al " + b);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            
+            
             while (a <= b)
             {
                 for (int i = 1; i <= a; i++)
@@ -59,7 +67,7 @@ namespace Numeros_Primos_2._0
                 }
                 if (c == 2)
                 {
-                    Console.WriteLine("    "+ a + " es primo" + "    ");
+                    Console.WriteLine("\t\t\t\t\t\t" + a + " es primo.");
                 }
                 c = 0;
                 a++;
