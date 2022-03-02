@@ -11,6 +11,7 @@ namespace Practica_Proyecto
     {
         public int menu(int a)
         {
+            
             Console.ReadKey();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Blue;

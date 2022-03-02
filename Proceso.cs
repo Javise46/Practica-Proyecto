@@ -23,7 +23,7 @@ namespace Practica_Proyecto
                 int[] b = Menu1.Rangos();
                 
                 opr.rango(b[0], b[1]);
-                a = 9;
+                 a = 9;
             }
             else if (a == 2)
             {
